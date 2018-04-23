@@ -5,9 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --watch",
-    "webpack": "./node_modules/.bin/webpack"
+    "webpack": "./node_modules/.bin/webpack",
+    "build-wasm": "./node_modules/.bin/asc ./src/mandelbrot.ts --outFile ./src/mandelbrot.wasm --textFile ./src/mandelbrot.wat --optimize --validate --importMemory"
   },
   "dependencies": {
+    "assemblyscript": "https://github.com/AssemblyScript/assemblyscript",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "copy-webpack-plugin": "^4.5.1",

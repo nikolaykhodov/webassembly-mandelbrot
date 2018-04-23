@@ -7,6 +7,10 @@ module.exports = {
     entry: {
         'mandelbrot-es6': [
             './src/mandelbrot-es6.js'
+        ],
+
+        'mandelbrot-wasm': [
+            './src/mandelbrot-wasm.js'
         ]
     },
 
@@ -35,6 +39,11 @@ module.exports = {
                 {
                     context: 'src/',
                     from: '**/*.html',
+                    to: './'
+                },
+                {
+                    context: 'src/',
+                    from: '**/*.wasm',
                     to: './'
                 }
             ], {
